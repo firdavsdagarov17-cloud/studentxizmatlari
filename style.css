@@ -1,0 +1,495 @@
+:root{
+  --primary:#0d6efd;
+  --primary-dark:#084298;
+  --text:#111;
+  --muted:#555;
+  --bg:#ffffff;
+  --soft:#f8f9fb;
+  --border:#e6e6e6;
+}
+/* Umumiy */
+* {
+    box-sizing: border-box;
+}
+body{
+  margin:0;
+  font-family: "Inter", Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+.section-title{
+  font-size:34px;
+  margin:0 0 10px 0;
+  letter-spacing:-0.5px;
+}
+
+.section-subtitle{
+  margin:0 0 34px 0;
+  color:var(--muted);
+}
+
+.section-subtitle {
+    margin: 0 0 30px 0;
+    color: #555;
+}
+
+/* HEADER */
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 24px;
+  background:rgba(255,255,255,0.9);
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.logo{
+  font-weight:700;
+  font-size:18px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #111;
+}
+
+.nav-list a:hover {
+    color: #007bff;
+}
+
+/* HERO */
+.hero {
+    padding: 70px 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 0 0 12px 0;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 0 auto 20px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.hero-btn:hover {
+    background: #0056b3;
+}
+
+/* SERVICES */
+.services {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.services-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.service-card-title {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+.service-card-text {
+    margin: 0 0 16px 0;
+    color: #555;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.service-card-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.service-card-btn:hover {
+    background: #333;
+}
+
+/* ABOUT */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 850px;
+    margin: 0 auto 22px auto;
+    color: #555;
+    line-height: 1.7;
+}
+
+.about-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge {
+    background: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+/* CONTACT */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.contact-btn:hover {
+    background: #333;
+}
+
+.contact-hours {
+    margin-top: 18px;
+    color: #555;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE (Telefon) */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* PORTFOLIO */
+.portfolio {
+    padding: 60px 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.portfolio-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.portfolio-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-card h3 {
+    margin: 14px 14px 6px 14px;
+    font-size: 18px;
+}
+
+.portfolio-card p {
+    margin: 0 14px 14px 14px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.portfolio-grid {
+    grid-template-columns: 1fr;
+}
+/* PRICING */
+.pricing {
+    padding: 60px 20px;
+    background: #f8f9fb;
+    text-align: center;
+}
+
+.pricing-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.pricing-card h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0d6efd;
+    margin: 10px 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pricing-card ul li {
+    margin: 8px 0;
+}
+
+.pricing-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.pricing-btn:hover {
+    background: #084298;
+}
+
+.pricing-card.popular {
+    border: 2px solid #0d6efd;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+* FAQ */
+.faq {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    display: grid;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: 18px 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.faq-question {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.faq-answer {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 14px;
+}
+/* ORDER FORM */
+.order {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.order-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.order-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.order-btn {
+    display: inline-block;
+    padding: 12px;
+    background: #0d6efd;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.order-btn:hover {
+    background: #084298;
+}
+/* REVIEWS */
+.reviews {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.reviews-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.review-card {
+    background: #f8f9fb;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.review-text {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #555;
+}
+.reviews-grid {
+    grid-template-columns: 1fr;
+}
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  background:var(--primary);
+  color:white;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover{
+  background:var(--primary-dark);
+  transform: translateY(-1px);
+}
+.service-card,
+.portfolio-card,
+.pricing-card,
+.review-card{
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.service-card:hover,
+.portfolio-card:hover,
+.pricing-card:hover,
+.review-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+.order-btn{
+  display:inline-block;
+  padding:12px;
+  background:#0d6efd;
+  color:white;
+  border:none;
+  border-radius:6px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.order-btn:hover{ background:#084298; }

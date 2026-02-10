@@ -1,0 +1,22 @@
+const form = document.getElementById("orderForm");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("orderName").value.trim();
+  const service = document.getElementById("orderService").value.trim();
+  const deadline = document.getElementById("orderDeadline").value.trim();
+  const note = document.getElementById("orderNote").value.trim();
+
+  const message =
+`🧾 Yangi buyurtma
+👤 Ism: ${name}
+🛠 Xizmat: ${service}
+⏰ Deadline: ${deadline}
+📝 Izoh: ${note || "Yo‘q"}`;
+
+  // Telegram Share URL (eng ishonchli usul)
+  const shareUrl = "https://t.me/share/url?url=&text=" + encodeURIComponent(message);
+
+  window.open(shareUrl, "_blank");
+});
